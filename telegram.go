@@ -1,13 +1,13 @@
 package telegram
 
 import (
-	tgbotapi "gopkg.in/telegram-bot-api.v4"
+	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
 type Agent interface {
 	Send(c tgbotapi.Chattable) (tgbotapi.Message, error)
 	StopReceivingUpdates()
-	GetUpdatesChan(config tgbotapi.UpdateConfig) (tgbotapi.UpdatesChannel, error)
+	GetUpdatesChan(config tgbotapi.UpdateConfig) tgbotapi.UpdatesChannel
 	GetUpdates(config tgbotapi.UpdateConfig) ([]tgbotapi.Update, error)
 }
 

@@ -1,6 +1,6 @@
 package telegram
 
-import tgbotapi "gopkg.in/telegram-bot-api.v4"
+import tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 
 func NewButton(text string, inlineCommandId InlineCommandId) tgbotapi.InlineKeyboardButton {
 	return tgbotapi.NewInlineKeyboardButtonData(

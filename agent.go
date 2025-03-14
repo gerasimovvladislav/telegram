@@ -2,13 +2,12 @@ package telegram
 
 import (
 	"fmt"
-	"net/http"
 
-	tgbotapi "gopkg.in/telegram-bot-api.v4"
+	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
 func NewAgent(token string) (*tgbotapi.BotAPI, error) {
-	tgBotAPI, err := tgbotapi.NewBotAPIWithClient(token, &http.Client{})
+	tgBotAPI, err := tgbotapi.NewBotAPI(token)
 	if err != nil {
 		return nil, fmt.Errorf("can't init telegram bot: %w", err)
 	}

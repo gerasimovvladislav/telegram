@@ -4,11 +4,11 @@ import (
 	"context"
 	"log"
 
+	"github.com/gerasimovvladislav/telegram"
+	"github.com/gerasimovvladislav/telegram/examples/tgbot"
+	"github.com/gerasimovvladislav/telegram/examples/tgbot/internal/slash"
+	"github.com/gerasimovvladislav/telegram/examples/tgbot/internal/slash/processors"
 	"github.com/jessevdk/go-flags"
-	"gitlab.com/vladislavgerasimov/telegram"
-	"gitlab.com/vladislavgerasimov/telegram/examples/tgbot"
-	"gitlab.com/vladislavgerasimov/telegram/examples/tgbot/internal/slash"
-	"gitlab.com/vladislavgerasimov/telegram/examples/tgbot/internal/slash/processors"
 )
 
 func main() {
@@ -33,8 +33,12 @@ func main() {
 		nil,
 		nil,
 	)
-	err = b.Start(context.Background())
 	if err != nil {
 		log.Fatal("failed to run bot: ", err)
+	}
+
+	err = b.Start(context.Background())
+	if err != nil {
+		log.Fatal("failed to start bot: ", err)
 	}
 }

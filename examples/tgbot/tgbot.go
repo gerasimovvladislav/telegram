@@ -1,7 +1,7 @@
 package tgbot
 
 import (
-	"gitlab.com/vladislavgerasimov/telegram"
+	"github.com/gerasimovvladislav/telegram"
 )
 
 func Init(token string, IDs []int64,

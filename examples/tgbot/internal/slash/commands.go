@@ -1,6 +1,6 @@
 package slash
 
-import "gitlab.com/vladislavgerasimov/telegram"
+import "github.com/gerasimovvladislav/telegram"
 
 const (
 	CommandIdHello telegram.SlashCommandId = "hello"

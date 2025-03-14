@@ -1,10 +1,10 @@
 package processors
 
 import (
-	tgbotapi "gopkg.in/telegram-bot-api.v4"
+	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 
-	"gitlab.com/vladislavgerasimov/telegram"
-	"gitlab.com/vladislavgerasimov/telegram/examples/tgbot/internal/slash"
+	"github.com/gerasimovvladislav/telegram"
+	"github.com/gerasimovvladislav/telegram/examples/tgbot/internal/slash"
 )
 
 type Hello struct{}

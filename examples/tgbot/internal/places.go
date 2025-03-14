@@ -1,6 +1,6 @@
 package internal
 
-import "gitlab.com/vladislavgerasimov/telegram"
+import "github.com/gerasimovvladislav/telegram"
 
 const (
 	PlaceIdHome telegram.PlaceId = "home"
