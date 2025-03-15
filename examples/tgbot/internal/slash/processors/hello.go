@@ -25,7 +25,10 @@ func (h *Hello) PlaceOut() telegram.PlaceId {
 	return ""
 }
 
-func (h *Hello) Execute(_ *telegram.SlashCommandState, user *telegram.User) (*telegram.SlashCommandProcessorResult, error) {
+func (h *Hello) Execute(state *telegram.SlashCommandState, user *telegram.User) (*telegram.SlashCommandProcessorResult, error) {
+	args := state.Args()
+	_ = args
+
 	msg := tgbotapi.NewMessage(
 		int64(user.ID),
 		"Hello, World!")

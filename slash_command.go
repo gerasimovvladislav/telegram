@@ -36,7 +36,7 @@ func (c *SlashCommandState) Id() SlashCommandId {
 }
 
 func (c *SlashCommandState) Args() []string {
-	return strings.Split(c.update.Raw().Message.Command(), " ")
+	return strings.SplitAfterN(strings.TrimLeft(c.update.Raw().Message.Text, "/"+c.update.Raw().Message.Command()), " ", 1)
 }
 
 type SlashCommandProcessor interface {
